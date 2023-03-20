@@ -7,6 +7,15 @@ module.exports = {
     mode: "development",
     entry: "./src/main.js",
     devtool: "inline-source-map",
+    devServer: {
+        static: './dist',
+    },
+    performance: {
+        hints: false,
+        maxEntryPointSize: 512000,
+        maxAssetSize: 512000
+    },
+
     module: {
         rules: [
             {
